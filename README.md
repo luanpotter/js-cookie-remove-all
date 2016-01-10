@@ -5,4 +5,19 @@
 
 This is a very, very simple (almost tweetable) lib that patches [js-cookie](https://www.github.com/js-cookie/js-cookie) to add a useful `removeAll` function that removes all the cookies accessible from the page.
 
-There is not much more to say.
+Just drop into `package.json`
+
+```bash
+npm install --save js-cookie-remove-all
+```
+
+and require it after requiring js-cookie:
+
+```javascript
+var Cookies = require('js-cookie');
+require('js-cookie-remove-all');
+
+// ...
+
+Cookies.removeAll();
+```
