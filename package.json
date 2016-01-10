@@ -2,9 +2,9 @@
   "name": "js-cookie-remove-all",
   "version": "1.0.0",
   "description": "A simple patch to js-cookie lib that adds a function to remove all cookies",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "peer-dependencies": {
     "js-cookie": "2.x"
@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/luanpotter/js-cookie-remove-all/issues"
   },
-  "homepage": "https://github.com/luanpotter/js-cookie-remove-all#readme"
+  "homepage": "https://github.com/luanpotter/js-cookie-remove-all#readme",
+  "devDependencies": {
+    "js-cookie": "2.x",
+    "mocha": "~2.3.4",
+    "mock-cookie": "^0.3.2"
+  }
 }
