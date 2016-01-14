@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/luanpotter/js-cookie-remove-all.svg)](https://travis-ci.org/luanpotter/js-cookie-remove-all)
 [![npm](https://img.shields.io/npm/v/js-cookie-remove-all.svg)](https://www.npmjs.com/package/js-cookie-remove-all)
 
-This is a very, very simple (almost tweetable) lib that patches [js-cookie](https://www.github.com/js-cookie/js-cookie) to add a useful `removeAll` function that removes all the cookies accessible from the page.
+This is a lib that patches [js-cookie](https://www.github.com/js-cookie/js-cookie) to add a useful `removeAll` function that removes all the cookies accessible from the page.
 
 Just drop into `package.json`
 
@@ -11,13 +11,12 @@ Just drop into `package.json`
 npm install --save js-cookie-remove-all
 ```
 
-and require it after requiring js-cookie:
+and require it:
 
 ```javascript
-var Cookies = require('js-cookie');
-require('js-cookie-remove-all');
+var Cookies = require('js-cookie-remove-all');
 
 // ...
 
-Cookies.removeAll();
+Cookies.removeAll(attributes);
 ```
