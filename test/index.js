@@ -1,12 +1,12 @@
-var assert = require('assert');
-var mock = require('mock-cookie');
+const assert = require('assert');
+const mock = require('mock-cookie');
 
 document = new mock.Document();
 
 describe('Cookies', function () {
   describe('#removeAll()', function () {
     it('should remove all cookies', function () {
-      var Cookies = require('../src/index.js');
+      const Cookies = require('../src/index.js');
 
       Cookies.set('a', '1');
       Cookies.set('b', '2');
@@ -15,8 +15,8 @@ describe('Cookies', function () {
 
       Cookies.removeAll();
 
-      var actual = Cookies.get('a');
-      var expected = undefined;
+      let actual = Cookies.get('a');
+      let expected = undefined;
       assert.strictEqual(actual, expected);
 
       actual = Cookies.get('b');
@@ -24,13 +24,13 @@ describe('Cookies', function () {
       assert.strictEqual(actual, expected);
     });
     it('should change the original Cookies API', function() {
-      var Cookies = require('js-cookie');
+      const Cookies = require('js-cookie');
       require('../src/index.js');
       assert.ok(!!Cookies.removeAll);
     });
     it('should make the API available for a new Cookies.withConverter() instance', function () {
-      var Cookies = require('../src/index.js');
-      var newInstance = Cookies.withConverter();
+      const Cookies = require('../src/index.js');
+      const newInstance = Cookies.withConverter();
       assert.ok(!!newInstance.removeAll, 'api should be available for new instance');
       assert.ok(!function(){}.removeAll, 'api should not be available for all functions');
     });
