@@ -19,7 +19,7 @@ describe('Cookies', function () {
       var expected = undefined;
       assert.strictEqual(actual, expected);
 
-      actual = Cookies.get('a');
+      actual = Cookies.get('b');
       expected = undefined;
       assert.strictEqual(actual, expected);
     });

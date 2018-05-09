@@ -26,7 +26,7 @@
   "homepage": "https://github.com/luanpotter/js-cookie-remove-all#readme",
   "devDependencies": {
     "js-cookie": "2.x",
-    "mocha": "~2.3.4",
+    "mocha": "^5.1.1",
     "mock-cookie": "^0.3.2"
   }
 }
